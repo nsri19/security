@@ -46,7 +46,7 @@ jobs:
       run: mvn -B checkstyle:checkstyle
 
     - name: Package
-      run: mvn -B clean package -Padvanced -DskipTests
+      run: mvn -B clean package -Padvanced -Dproject_jdk_version=11 -DskipTests
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
