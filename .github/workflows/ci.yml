@@ -17,6 +17,7 @@ jobs:
     name: build
     runs-on: ubuntu-latest
     strategy:
+      fail-fast: false
       matrix:
         jdk: [8, 11, 14, 17]
 
@@ -46,7 +47,7 @@ jobs:
       run: mvn -B checkstyle:checkstyle
 
     - name: Package
-      run: mvn -B clean package -Padvanced -Dproject_jdk_version=11 -DskipTests
+      run: mvn -B clean package -Padvanced -DskipTests
 
     - name: Perform CodeQL Analysis
       uses: github/codeql-action/analyze@v1
