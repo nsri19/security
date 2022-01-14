@@ -16,13 +16,16 @@ jobs:
   build:
     name: build
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        jdk: [8, 11, 14, 17]
 
     steps:
 
-    - name: Set up JDK 14
+    - name: Set up JDK
       uses: actions/setup-java@v1
       with:
-        java-version: 14.0.x
+        java-version: ${{ matrix.jdk }}
 
     - name: Checkout security
       uses: actions/checkout@v2
