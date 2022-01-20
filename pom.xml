@@ -555,8 +555,8 @@
                         <configuration>
                             <rules>
                                 <requireJavaVersion>
-                                    <version>[1.11,)</version>
-                                    <message>Java 11 or later required to build the plugin</message>
+                                    <version>[1.8,)</version>
+                                    <message>Java 8 or later required to build the plugin</message>
                                 </requireJavaVersion>
                             </rules>
                         </configuration>
