@@ -2,6 +2,10 @@
 
 Compatible with OpenSearch 1.2.4
 
+###
+TEST TO BE REMOVED
+###
+
 ### Maintenance
 
 * Bump log4j-core from 2.17.0 to 2.17.1 ([#1551](https://github.com/opensearch-project/security/pull/1551))
